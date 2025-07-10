@@ -26,6 +26,18 @@
         </div>
     </div>
 
-    <script src="scripts/main.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const imgs = document.querySelectorAll(".animated-img");
+        imgs.forEach(img => {
+            img.onload = () => {
+                const animateClass = img.dataset.animate;
+                img.classList.add(animateClass);
+                img.style.opacity = 1;
+            };
+        });
+    });
+    </script>
+
 </body>
 </html>
