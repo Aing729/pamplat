@@ -2,8 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px; 
+    gap: 30px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
+
 
 .mbg-1, .mbg-2, .mbg-3, .mbg-4 {
     width: 350px;
@@ -71,5 +77,18 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+@media (max-width: 900px) {
+    .horizontal-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .horizontal-container > div {
+        justify-self: center; 
+        width: 80vw; 
     }
 }
